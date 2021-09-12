@@ -1,12 +1,14 @@
 /// Write variables first
 
-var confirmLength = " ";
+var confirmLength;
 var confirmLowercase;
 var confirmUppercase;
 var confirmNumeric;
 var confirmSpecialCharacters;
 var charactersUsed = [];
 var finalPassword;
+
+
 
 /// Then write arrays for letters and characters
 
@@ -20,14 +22,59 @@ var specialCharacters = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", 
 
 // Functions
 
+//Main Function
+
 function generatePassword() {
 
-  var confirmLength = (prompt("How many characters will your password have? Choose between 8 - 120 characters."));
+// Confirm Length
 
-  var confirmLowercase = (prompt("Would you like to include lowercase letters? Select 'OK' if you would, select 'Cancel' for no."))
+    var confirmLength = (prompt("How many characters will your password have? Choose between 8 - 120 characters"));
 
+// Error Message
 
+    while(confirmLength < 8 || confirmLength > 120);
+        alert("Error: Please Enter a Password Length between 8 and 120");
+        var confirmLength = (prompt("How many characters will your password have? (8 - 120)"));
 }
+
+// Confirmation of Password Length
+
+alert('The length of your password will be ' + confirmLength + ' characters long.');
+
+// Confirm Lowercase Letters
+    
+    var confirmLowercase = (prompt("Would you like to include lowercase letters? Select 'OK' if you would, select 'Cancel' for no."));
+        if (confirmLowercase) {
+            charactersUsed = charactersUsed.concat(lowercase);
+            alert('Your password will contain lowercase letters.');
+        } else {
+            alert('Your password will NOT  contain lowercase letters.');
+        };
+
+//Confirm Uppercase Letters
+
+    var confirmUppercase = (prompt("Would you like to include uppercase letters? Select 'OK' if you would, select 'Cancel' for no."))
+        if (confirmUppercase) {
+            charactersUsed = charactersUsed.concat(uppercase);
+            alert('Your password will contain uppercase letters.');
+        } else {
+            alert('Your password will NOT contain uppercase letters.');
+        };
+  
+// Confirm Special Characters
+
+    var confirmSpecialCharacters = (confirm("Would you like to include special characters? Select 'OK' if you would, select 'Cancel' for no."));
+    if(confirmSpecialCharacters){
+        charactersUsed = charactersUsed.concat(specialCharacters);
+        alert('Your password will contain special characters.');
+    } else {
+        alert('Your password will not contain special characters.');
+    };
+  
+// End of Confirmations
+
+console.log(charactersUsed)
+console.log(password)
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");

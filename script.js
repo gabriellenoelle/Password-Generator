@@ -33,13 +33,22 @@ function generatePassword() {
 // Error Message
 
     while(confirmLength < 8 || confirmLength > 120);
-        alert("Error: Please Enter a Password Length between 8 and 120");
+            alert("Error: Please Enter a Password Length between 8 and 120");
         var confirmLength = (prompt("How many characters will your password have? (8 - 120)"));
-}
-
+        }
 // Confirmation of Password Length
 
-alert('The length of your password will be ' + confirmLength + ' characters long.');
+            alert('The length of your password will be ' + confirmLength + ' characters long.');
+
+// Confirm Numbers
+
+    var confirmNumeric = confirm("Would you like to include numbers? Select 'OK' if you would, select 'Cancel' for no.");
+        if (confirmNumeric) {
+            charactersUsed = charactersUsed.concat(confirmNumeric);
+            alert('Your password will contain numbers.');
+        } else {
+            alert('Your password will NOT contain numbers.');
+        };
 
 // Confirm Lowercase Letters
     
@@ -48,7 +57,7 @@ alert('The length of your password will be ' + confirmLength + ' characters long
             charactersUsed = charactersUsed.concat(lowercase);
             alert('Your password will contain lowercase letters.');
         } else {
-            alert('Your password will NOT  contain lowercase letters.');
+            alert('Your password will NOT contain lowercase letters.');
         };
 
 //Confirm Uppercase Letters
@@ -66,11 +75,11 @@ alert('The length of your password will be ' + confirmLength + ' characters long
     var confirmSpecialCharacters = (confirm("Would you like to include special characters? Select 'OK' if you would, select 'Cancel' for no."));
     if(confirmSpecialCharacters){
         charactersUsed = charactersUsed.concat(specialCharacters);
-        alert('Your password will contain special characters.');
-    } else {
-        alert('Your password will not contain special characters.');
-    };
-  
+            alert('Your password will contain special characters.');
+        } else {
+            alert('Your password will not contain special characters.');
+        };
+
 // End of Confirmations
 
 console.log(charactersUsed)

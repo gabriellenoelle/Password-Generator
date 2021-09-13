@@ -80,6 +80,31 @@ function generatePassword() {
             alert('Your password will not contain special characters.');
         };
 
+// Loop
+
+    while(confirmLowercase === false && confirmUppercase === false && confirmNumeric === false && confirmNumeric === false) {
+            alert("Please select one of the options so that we can create your password.");
+        }
+
+// Console Log Code
+
+    console.log(charactersUsed)
+
+// Password Generation
+
+        var finalPassword = "";
+
+        for (var i = 0; i < confirmLength; i++) {
+            finalPassword = charactersUsed[Math.floor(Math.random() * charactersUsed.length)] + finalPassword;
+            console.log(finalPassword)
+        }
+
+        return finalPassword;
+
+// Password Generation Continued
+
+
+
 // End of Confirmations
 
 console.log(charactersUsed)

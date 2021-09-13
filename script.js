@@ -91,26 +91,6 @@ function generatePassword(){
             alert("Alright! Let's create your password!");
         }
 
-        if(confirmLowercase === false && confirmUppercase === true && confirmNumeric === true && confirmSpecialCharacters === true) {
-        } else {
-            alert("Alright! Let's create your password!");
-        }
-
-        if(confirmLowercase === true && confirmUppercase === false && confirmNumeric === true && confirmSpecialCharacters === true) {
-        } else {
-            alert("Alright! Let's create your password!");
-        }
-
-        if(confirmLowercase === true && confirmUppercase === true && confirmNumeric === false && confirmSpecialCharacters === true) {
-        } else {
-            alert("Alright! Let's create your password!");
-        }
-
-        if(confirmLowercase === true && confirmUppercase === true && confirmNumeric === true && confirmSpecialCharacters === false) {
-        } else {
-            alert("Alright! Let's create your password!");
-        }
-
 // Confirm Numbers After Error
 
 var confirmNumeric = confirm("Would you like to include numbers? Select 'OK' if you would, select 'Cancel' for no.");

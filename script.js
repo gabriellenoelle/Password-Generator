@@ -1,4 +1,4 @@
-/// Write variables first
+/// Variables
 
 var confirmLength;
 var confirmLowercase;
@@ -8,9 +8,7 @@ var confirmSpecialCharacters;
 var charactersUsed = [];
 var finalPassword;
 
-
-
-/// Then write arrays for letters and characters
+/// Arrays for Letters and Characters
 
 var uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
@@ -36,6 +34,7 @@ function generatePassword() {
             alert("Error: Please Enter a Password Length between 8 and 120");
         var confirmLength = (prompt("How many characters will your password have? (8 - 120)"));
         }
+        
 // Confirmation of Password Length
 
             alert('The length of your password will be ' + confirmLength + ' characters long.');
@@ -98,12 +97,6 @@ function generatePassword() {
             finalPassword = charactersUsed[Math.floor(Math.random() * charactersUsed.length)] + finalPassword;
             console.log(finalPassword)
         }
-
-        return finalPassword;
-
-// Password Generation Continued
-
-
 
 // End of Confirmations
 

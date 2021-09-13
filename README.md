@@ -5,7 +5,7 @@
 
 In this project, I created a password generator using Javascript. I was given base HTML and CSS. This password generator will create a password based on your specifications:
 <br/><br/>
-Do you want it to have uppercase letters? Lowercase? Numbers? How about special characters?
+Do you want your password to have uppercase letters? Lowercase? Numbers? How about special characters?
 <br/><br/>
 Don't forget to keep it between 8 and 120 characters!
 <br/><br/>

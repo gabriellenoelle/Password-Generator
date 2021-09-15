@@ -14,9 +14,7 @@ var charactersUsed = [];
 
 //Main Function
 
-function generatePassword(){
-
-
+function generatePassword() {
 
 // Confirm Length
 
@@ -49,116 +47,31 @@ console.log(confirmLength);
                 console.log("charactersUsed",charactersUsed);
              }
 
+             if (confirmLowercase) {
+                charactersUsed = charactersUsed.concat(lowercase);
+               console.log("charactersUsed",charactersUsed);
+            }
+
+            if (confirmSpecialCharacters) {
+                charactersUsed = charactersUsed.concat(specialCharacters);
+               console.log("charactersUsed",charactersUsed);
+            }
 // Characters Used in String
 console.log(confirmNumeric);
 
+    var finalPassword = "";
+
+        for (var i = 0; i < confirmLength; i++) {
+        finalPassword = charactersUsed[Math.floor(Math.random() * charactersUsed.length)] + finalPassword;
+        console.log(finalPassword)
+        }
+
+        return finalPassword;
+
+
     }
-
-// // Confirm Numbers
-
-//     var confirmNumeric = confirm("Would you like to include numbers? Select 'OK' if you would, select 'Cancel' for no.");
-//         if (confirmNumeric) {
-//             charactersUsed = charactersUsed.concat(confirmNumeric);
-//             alert('Your password will contain numbers.');
-//         } else {
-//             alert('Your password will NOT contain numbers.');
-//         };
-
-// // Confirm Lowercase Letters
-    
-//     var confirmLowercase = (prompt("Would you like to include lowercase letters? Select 'OK' if you would, select 'Cancel' for no."));
-//         if (confirmLowercase) {
-//             charactersUsed = charactersUsed.concat(lowercase);
-//             alert('Your password will contain lowercase letters.');
-//         } else {
-//             alert('Your password will NOT contain lowercase letters.');
-//         };
-
-// //Confirm Uppercase Letters
-
-//     var confirmUppercase = (prompt("Would you like to include uppercase letters? Select 'OK' if you would, select 'Cancel' for no."))
-//         if (confirmUppercase) {
-//             charactersUsed = charactersUsed.concat(uppercase);
-//             alert('Your password will contain uppercase letters.');
-//         } else {
-//             alert('Your password will NOT contain uppercase letters.');
-//         };
-  
-// // Confirm Special Characters
-
-//     var confirmSpecialCharacters = (confirm("Would you like to include special characters? Select 'OK' if you would, select 'Cancel' for no."));
-//     if(confirmSpecialCharacters){
-//         charactersUsed = charactersUsed.concat(specialCharacters);
-//             alert('Your password will contain special characters.');
-//         } else {
-//             alert('Your password will not contain special characters.');
-//         };
-
-// // Loop - Error Alert
-
-//     while(confirmLowercase === false && confirmUppercase === false && confirmNumeric === false && confirmSpecialCharacters === false) {
-//             alert("Please select one of the options so that we can create your password.");
-//     }
-//          if(confirmLowercase === true && confirmUppercase === true && confirmNumeric === true && confirmSpecialCharacters === true) {
-//         } else {
-//             alert("Alright! Let's create your password!");
-//         }
-
-// // Confirm Numbers After Error
-
-// var confirmNumeric = confirm("Would you like to include numbers? Select 'OK' if you would, select 'Cancel' for no.");
-// if (confirmNumeric) {
-//     charactersUsed = charactersUsed.concat(confirmNumeric);
-//     alert('Your password will contain numbers.');
-// } else {
-//     alert('Your password will NOT contain numbers.');
-// };
-
-// // Confirm Lowercase Letters After Error
-
-// var confirmLowercase = (prompt("Would you like to include lowercase letters? Select 'OK' if you would, select 'Cancel' for no."));
-// if (confirmLowercase) {
-//     charactersUsed = charactersUsed.concat(lowercase);
-//     alert('Your password will contain lowercase letters.');
-// } else {
-//     alert('Your password will NOT contain lowercase letters.');
-// };
-
-// //Confirm Uppercase Letters After Error
-
-// var confirmUppercase = (prompt("Would you like to include uppercase letters? Select 'OK' if you would, select 'Cancel' for no."))
-// if (confirmUppercase) {
-//     charactersUsed = charactersUsed.concat(uppercase);
-//     alert('Your password will contain uppercase letters.');
-// } else {
-//     alert('Your password will NOT contain uppercase letters.');
-// };
-
-// // Confirm Special Characters After Error
-
-// var confirmSpecialCharacters = (confirm("Would you like to include special characters? Select 'OK' if you would, select 'Cancel' for no."));
-// if(confirmSpecialCharacters){
-// charactersUsed = charactersUsed.concat(specialCharacters);
-//     alert('Your password will contain special characters.');
-// } else {
-//     alert('Your password will not contain special characters.');
-// };
-
-// Console Log Code
-
-// console.log(charactersUsed)
-
+generatePassword()
 // Password Generation
-
-//         var finalPassword = "";
-
-//         for (var i = 0; i < confirmLength; i++) {
-//             finalPassword = charactersUsed[Math.floor(Math.random() * charactersUsed.length)] + finalPassword;
-//             console.log(finalPassword)
-//         }
-generatePassword();
-// // End of Confirmations
-
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
@@ -166,12 +79,11 @@ var generatePassword = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+  var password = function generatePassword()
+  {var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 
 }
-
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", writePassword);}
